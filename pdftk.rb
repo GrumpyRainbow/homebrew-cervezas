@@ -11,11 +11,11 @@ end
 
 class Pdftk < Formula
   homepage 'http://www.pdflabs.com/tools/pdftk-server'
-  url 'http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.6-setup.pkg',
+  url 'https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.11-setup.pkg',
     :using => PkgExtract
-  sha1 '93226ecef996d7ad833a773ee15f9b62365fb567'
+  sha1 '68361f759a658636a3d147504d90197c688bf209'
 
-  depends_on :macos => :lion
+  depends_on :macos => :el_capitan
 
   def install
     safe_system "pax --insecure -rz -f Payload.gz -s ',./bin,#{bin},' -s ',./man,#{man},' -s ',./lib,#{lib},' -s ',./license_gpl_pdftk,#{prefix}/LICENSE,' -s ',./,#{prefix}/README/,'"
